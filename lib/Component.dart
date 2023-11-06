@@ -524,5 +524,3 @@ class judulPage extends StatelessWidget {
     );
   }
 }
-
-
