@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:landing_page/Component.dart';
+
 class QuickAcces extends StatelessWidget {
   const QuickAcces({Key? key}) : super(key: key);
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'LandingPage.dart';
+import 'package:landing_page/ShoppingPage.dart';
 
 class TabPage extends StatefulWidget {
   const TabPage({Key? key}) : super(key: key);
@@ -11,10 +12,9 @@ class TabPage extends StatefulWidget {
 class _TabPageState extends State<TabPage> {
 
   List<Widget> halaman = [
+    ShoppingPage(),
     LandingPage(),
-    Container(
-      color: Colors.grey,
-    ),
+
     Container(
       color: Colors.blue,
     ),
