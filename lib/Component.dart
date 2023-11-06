@@ -477,7 +477,7 @@ class shopCon extends StatelessWidget {
                     width: 250,
                     clipBehavior: Clip.hardEdge,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5),
+                        borderRadius: BorderRadius.only(bottomRight: Radius.circular(5), topRight: Radius.circular(5))
                     ),
                     child: Image.asset(
                       imageAssetPath,
@@ -521,6 +521,117 @@ class judulPage extends StatelessWidget {
               ),)
           ],
         )
+    );
+  }
+}
+
+
+class promoPage extends StatelessWidget {
+  final String imageAssetPath;
+  final String text1;
+  final String text2;
+  final String text3;
+  final String text4;
+
+
+  const promoPage({Key? key, required this.imageAssetPath, required this.text1, required this.text2, required this.text3, required this.text4}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return  Container(
+      padding: EdgeInsets.all(10),
+      child: Row(
+          children: [
+      Expanded(
+      child: Container(
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(6),
+      color: AppColors.card,
+    ),
+    child: Row(
+    mainAxisAlignment: MainAxisAlignment.start,
+    children: [
+
+    Flexible(
+    flex: 1,
+    child: Container(
+    height: 60,
+    clipBehavior: Clip.hardEdge,
+    decoration: BoxDecoration(
+    borderRadius: BorderRadius.only(topLeft: Radius.circular(5), bottomLeft: Radius.circular(5)),
+    ),
+    child: Image.asset(imageAssetPath, fit: BoxFit.cover,),
+    ),
+    ),
+
+    Flexible(
+    flex: 3,
+    child: Container(
+    padding: EdgeInsets.all(7),
+    height: 60,
+    width: 233,
+    decoration: BoxDecoration(
+    borderRadius: BorderRadius.only(topLeft: Radius.circular(5), bottomLeft: Radius.circular(5)),
+    ),
+    child: Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    mainAxisAlignment: MainAxisAlignment.start,
+    children: [
+    Text(
+    text1, style: TextStyle(
+    fontSize: 10,
+    fontWeight: FontWeight.normal,
+    color: AppColors.disabled,
+    fontFamily: 'Roboto'
+    ),
+    ),
+    Text(
+    text2, style: TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.normal,
+    color: Colors.white,
+    fontFamily: 'Roboto'
+    ),
+    ),
+    Text(
+    text3, style: TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.normal,
+    color: AppColors.main,
+    fontFamily: 'Roboto'
+    ),
+    ),
+    ],
+    )
+    ),
+    ),
+
+
+    Flexible(
+    flex: 1,
+    child: Container(
+    height: 60,
+    decoration: BoxDecoration(
+    color: AppColors.Green,
+    borderRadius: BorderRadius.only(bottomRight: Radius.circular(5), topRight: Radius.circular(5))
+    ),
+    child: Center(
+    child: Text(
+    text4, style: TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.bold,
+    fontFamily: 'Roboto'
+    ),
+    ),
+    ),
+    )
+    )
+    ],
+    ),
+    ),
+    ),
+    ]
+    ),
     );
   }
 }
