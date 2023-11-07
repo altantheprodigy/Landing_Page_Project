@@ -95,6 +95,16 @@ flutter:
     - images/Group 3.png
     - images/gopaylater.png
     - images/ride.png
+    - images/TopUp.jpg
+    - images/gamepad.png
+    - images/pln.png
+    - images/listrik.png
+    - images/banyu.png
+    - images/pam.png
+    - images/bpjs.png
+    - images/sehat.png
+    - images/Rectangle 55.png
+    - images/gensin.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
